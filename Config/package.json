@@ -1,0 +1,31 @@
+{
+  "name": "checkpointsautomation",
+  "version": "1.0.0",
+  "description": "Automation of check points",
+  "main": "index.js",
+  "config": {
+    "region": "eu-west-3",
+    "profile": "esncf",
+    "configName": "default",
+    "deliveryChannelName": "default",
+    "end": "--profile esncf"
+  },
+  "scripts": {
+    "list-rec": "aws configservice describe-configuration-recorders %npm_package_config_end%",
+    "list-dc": "aws configservice describe-delivery-channels %npm_package_config_end%",
+    "del-rec": "aws configservice delete-configuration-recorder --configuration-recorder-name %npm_package_config_configName% %npm_package_config_end%",
+    "del-dc": "aws configservice delete-delivery-channel --delivery-channel-name  %npm_package_config_deliveryChannelName% %npm_package_config_end%",
+    "start-recording": "aws configservice start-configuration-recorder --configuration-recorder-name %npm_package_config_configName% %npm_package_config_end%",
+    "stop-recording": "aws configservice stop-configuration-recorder --configuration-recorder-name %npm_package_config_configName% %npm_package_config_end%"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueskycorner/CheckPointsAutomation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blueskycorner/CheckPointsAutomation/issues"
+  },
+  "homepage": "https://github.com/blueskycorner/CheckPointsAutomation#readme"
+}
