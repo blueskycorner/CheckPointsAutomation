@@ -4,11 +4,10 @@
   "description": "Automation of check points",
   "main": "index.js",
   "config": {
-    "region": "eu-west-3",
     "profile": "esncf",
     "configName": "default",
-    "deliveryChannelName": "default",
-    "end": "--profile esncf"
+    "end": "--profile esncf --region eu-west-3",
+    "deliveryChannelName": "default"
   },
   "scripts": {
     "list-rec": "aws configservice describe-configuration-recorders %npm_package_config_end%",

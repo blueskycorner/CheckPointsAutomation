@@ -1,0 +1,148 @@
+{
+    "configurationItemDiff": {
+      "changedProperties": {
+        "Configuration.IpPermissions.0": {
+          "previousValue": null,
+          "updatedValue": {
+            "fromPort": 80,
+            "ipProtocol": "tcp",
+            "ipv6Ranges": [],
+            "prefixListIds": [],
+            "toPort": 80,
+            "userIdGroupPairs": [],
+            "ipv4Ranges": [
+              {
+                "cidrIp": "0.0.0.0/0"
+              }
+            ],
+            "ipRanges": [
+              "0.0.0.0/0"
+            ]
+          },
+          "changeType": "CREATE"
+        }
+      },
+      "changeType": "UPDATE"
+    },
+    "configurationItem": {
+      "relatedEvents": [],
+      "relationships": [
+        {
+          "resourceId": "eni-06c7917e489b17c0b",
+          "resourceName": null,
+          "resourceType": "AWS::EC2::NetworkInterface",
+          "name": "Is associated with NetworkInterface"
+        },
+        {
+          "resourceId": "i-071f660dcac02cc04",
+          "resourceName": null,
+          "resourceType": "AWS::EC2::Instance",
+          "name": "Is associated with Instance"
+        },
+        {
+          "resourceId": "vpc-0414f9fe05ee1126e",
+          "resourceName": null,
+          "resourceType": "AWS::EC2::VPC",
+          "name": "Is contained in Vpc"
+        }
+      ],
+      "configuration": {
+        "description": "Security group for VPC1",
+        "groupName": "VPC1",
+        "ipPermissions": [
+          {
+            "fromPort": 80,
+            "ipProtocol": "tcp",
+            "ipv6Ranges": [],
+            "prefixListIds": [],
+            "toPort": 80,
+            "userIdGroupPairs": [],
+            "ipv4Ranges": [
+              {
+                "cidrIp": "0.0.0.0/0"
+              }
+            ],
+            "ipRanges": [
+              "0.0.0.0/0"
+            ]
+          },
+          {
+            "fromPort": 22,
+            "ipProtocol": "tcp",
+            "ipv6Ranges": [],
+            "prefixListIds": [],
+            "toPort": 22,
+            "userIdGroupPairs": [],
+            "ipv4Ranges": [
+              {
+                "cidrIp": "0.0.0.0/0"
+              }
+            ],
+            "ipRanges": [
+              "0.0.0.0/0"
+            ]
+          }
+        ],
+        "ownerId": "315777477680",
+        "groupId": "sg-093f81febb576f9ca",
+        "ipPermissionsEgress": [
+          {
+            "ipProtocol": "-1",
+            "ipv6Ranges": [],
+            "prefixListIds": [],
+            "userIdGroupPairs": [],
+            "ipv4Ranges": [
+              {
+                "cidrIp": "0.0.0.0/0"
+              }
+            ],
+            "ipRanges": [
+              "0.0.0.0/0"
+            ]
+          }
+        ],
+        "tags": [
+          {
+            "key": "Name",
+            "value": ""
+          },
+          {
+            "key": "aws:cloudformation:logical-id",
+            "value": "sgVpc1"
+          },
+          {
+            "key": "aws:cloudformation:stack-name",
+            "value": "testTG-ec2-1DLKRQVK2VUNV"
+          },
+          {
+            "key": "aws:cloudformation:stack-id",
+            "value": "arn:aws:cloudformation:us-east-1:315777477680:stack/testTG-ec2-1DLKRQVK2VUNV/70bbfd80-8053-11e9-ba4b-0a30b495b19a"
+          }
+        ],
+        "vpcId": "vpc-0414f9fe05ee1126e"
+      },
+      "supplementaryConfiguration": {},
+      "tags": {
+        "aws:cloudformation:stack-name": "testTG-ec2-1DLKRQVK2VUNV",
+        "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:315777477680:stack/testTG-ec2-1DLKRQVK2VUNV/70bbfd80-8053-11e9-ba4b-0a30b495b19a",
+        "aws:cloudformation:logical-id": "sgVpc1",
+        "Name": "SG-VPC1"
+      },
+      "configurationItemVersion": "1.3",
+      "configurationItemCaptureTime": "2019-06-03T08:09:00.888Z",
+      "configurationStateId": 1559549340888,
+      "awsAccountId": "315777477680",
+      "configurationItemStatus": "OK",
+      "resourceType": "AWS::EC2::SecurityGroup",
+      "resourceId": "sg-093f81febb576f9ca",
+      "resourceName": "VPC1",
+      "ARN": "arn:aws:ec2:us-east-1:315777477680:security-group/sg-093f81febb576f9ca",
+      "awsRegion": "us-east-1",
+      "availabilityZone": "Not Applicable",
+      "configurationStateMd5Hash": "",
+      "resourceCreationTime": null
+    },
+    "notificationCreationTime": "2019-06-03T08:09:04.190Z",
+    "messageType": "ConfigurationItemChangeNotification",
+    "recordVersion": "1.3"
+  }
