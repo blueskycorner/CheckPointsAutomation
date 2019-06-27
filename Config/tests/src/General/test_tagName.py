@@ -1,5 +1,5 @@
 import json
-from CheckPointsAutomation.Config.src.functions.general.TagName import evaluate_compliance 
+from CheckPointsAutomation.Config.src.functions.general.RuleTagName import evaluate_compliance 
 
 # content of test_sample.py
 def getInput(input):

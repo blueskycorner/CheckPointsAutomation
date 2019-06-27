@@ -2,11 +2,14 @@ import json
 import boto3
 import logging
 
+from CheckPointsAutomation.Config.src.functions.Utils.lambdaUtils import init, buildEvaluation
+
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 config = boto3.client("config")
 
+annotation = "Tag Name must be present and not empty"
 
 def evaluate_compliance(configuration_item):
     compliance_status = "NON_COMPLIANT"
@@ -20,31 +23,14 @@ def evaluate_compliance(configuration_item):
 
 
 def lambda_handler(event, context):
-    logger.info("Event: " + json.dumps(event))
-    invoking_event = json.loads(event["invokingEvent"])
-    configuration_item = invoking_event["configurationItem"]
-    result_token = "No token found."
-    if "resultToken" in event:
-        result_token = event["resultToken"]
+    configuration_item, result_token = init(event)
 
     compliance_status = "NOT_APPLICABLE"
 
     if "eventLeftScope" in event and event["eventLeftScope"] == False:
         compliance_status = evaluate_compliance(configuration_item)
 
-    
-    evaluation = {
-        "ComplianceResourceType":
-            configuration_item["resourceType"],
-        "ComplianceResourceId":
-            configuration_item["resourceId"],
-        "ComplianceType":
-            compliance_status,
-        "Annotation":
-            "SSH Access is allowed to not allowed IP addess range",
-        "OrderingTimestamp":
-            configuration_item["configurationItemCaptureTime"]
-    }
+    evaluation = buildEvaluation(configuration_item, compliance_status, annotation)
 
     if "dryRun" not in event:
         config.put_evaluations(
