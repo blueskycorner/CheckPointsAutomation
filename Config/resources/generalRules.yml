@@ -1,0 +1,45 @@
+Resources:
+
+  TagNameRule:
+    DependsOn: TagNameRulePermission
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: ${self:service}-TagNameRule
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+        - EventSource: aws.config
+          MessageType: ConfigurationItemChangeNotification
+        - EventSource: aws.config
+          MessageType: OversizedConfigurationItemChangeNotification
+        SourceIdentifier: !GetAtt TagNameRuleLambdaFunction.Arn
+      Description: 'Ensures a tag Name is provided and is not empty'
+      # Scope:
+      #   ComplianceResourceTypes:
+      #   - AWS::EC2::SecurityGroup
+        
+  # To allow aws.config to call TagNameRule
+  TagNameRulePermission:
+    # DependsOn: ConfigRecorder
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt TagNameRuleLambdaFunction.Arn
+      Action: lambda:InvokeFunction
+      Principal: config.amazonaws.com
+        
+  # Basic role witch allows to write in config and cloudwatch
+  ConfigBaseRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: ${self:service}-BaseRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+      - arn:aws:iam::aws:policy/service-role/AWSConfigRulesExecutionRole
+      - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole

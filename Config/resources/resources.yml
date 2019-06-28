@@ -1,0 +1,5 @@
+resources:
+  # Main configuration
+  # - ${file(resources/configConfiguration.yml)}
+  # General rules
+  - ${file(resources/generalRules.yml)}

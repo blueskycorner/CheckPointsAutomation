@@ -1,9 +1,9 @@
 import json
-from CheckPointsAutomation.Config.src.functions.general.RuleTagName import evaluate_compliance 
+from src.functions.general.RuleTagName import evaluate_compliance 
 
 # content of test_sample.py
 def getInput(input):
-    input = 'CheckPointsAutomation/Config/tests/inputs/Tag/' + input
+    input = 'tests/inputs/Tag/' + input
     with open(input) as json_file:  
         event = json.load(json_file)
         print(event)

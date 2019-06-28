@@ -1,0 +1,33 @@
+service: PEX-Config # NOTE: update this with your service name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  region: us-east-1
+  runtime: python3.7
+  profile: hardis
+  stage: ${opt:stage, 'dev'}
+  stackTags:
+    Application: PEX-Config
+  tags:
+    Application: PEX-Config
+
+plugins:
+  - serverless-plugin-existing-s3
+
+functions:
+  TagNameRule:
+    handler: src/functions/general/RuleTagName.lambda_handler
+    timeout: 5
+    memorySize: 128
+    role: ConfigBaseRole
+
+resources: ${file(resources/resources.yml):resources}
+
+#  Outputs:
+#     NewOutput:
+#       Description: "Description for the output"
+#       Value: "Some output value"
