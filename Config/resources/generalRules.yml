@@ -14,9 +14,11 @@ Resources:
           MessageType: OversizedConfigurationItemChangeNotification
         SourceIdentifier: !GetAtt TagNameRuleLambdaFunction.Arn
       Description: 'Ensures a tag Name is provided and is not empty'
-      # Scope:
-      #   ComplianceResourceTypes:
-      #   - AWS::EC2::SecurityGroup
+      Scope:
+        ComplianceResourceTypes:
+        - AWS::EC2::SecurityGroup
+        - AWS::EC2::Instance
+        - AWS::EC2::Volume
         
   # To allow aws.config to call TagNameRule
   TagNameRulePermission:

@@ -15,6 +15,13 @@ provider:
   tags:
     Application: PEX-Config
 
+package:
+  exclude:
+    - node_modules/**
+    - resources/**
+    - tests/**
+    - package.json
+
 plugins:
   - serverless-plugin-existing-s3
 
