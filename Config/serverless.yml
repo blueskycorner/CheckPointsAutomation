@@ -23,7 +23,11 @@ package:
     - package.json
 
 plugins:
-  - serverless-plugin-existing-s3
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: false
 
 functions:
   TagNameRule:

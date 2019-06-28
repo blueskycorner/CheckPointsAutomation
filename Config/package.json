@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/blueskycorner/CheckPointsAutomation/issues"
   },
-  "homepage": "https://github.com/blueskycorner/CheckPointsAutomation#readme"
+  "homepage": "https://github.com/blueskycorner/CheckPointsAutomation#readme",
+  "dependencies": {
+    "serverless-python-requirements": "^4.3.0"
+  }
 }
