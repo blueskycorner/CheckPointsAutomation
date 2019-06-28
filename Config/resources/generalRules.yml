@@ -1,10 +1,10 @@
 Resources:
 
-  TagNameRule:
-    DependsOn: TagNameRulePermission
+  DetectTagNameRule:
+    DependsOn: DetectTagRulePermission
     Type: AWS::Config::ConfigRule
     Properties:
-      ConfigRuleName: ${self:service}-TagNameRule
+      ConfigRuleName: ${self:service}-DetectTagNameRule
       Source:
         Owner: CUSTOM_LAMBDA
         SourceDetails:
@@ -12,20 +12,147 @@ Resources:
           MessageType: ConfigurationItemChangeNotification
         - EventSource: aws.config
           MessageType: OversizedConfigurationItemChangeNotification
-        SourceIdentifier: !GetAtt TagNameRuleLambdaFunction.Arn
+        SourceIdentifier: !GetAtt DetectTagRuleLambdaFunction.Arn
       Description: 'Ensures a tag Name is provided and is not empty'
+      InputParameters: '{"tagLabel":"Name"}'
+      Scope:
+        ComplianceResourceTypes:
+        - AWS::EC2::SecurityGroup
+        - AWS::EC2::Instance
+        - AWS::EC2::Volume
+
+  DetectTagEnvironmentRule:
+    DependsOn: DetectTagRulePermission
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: ${self:service}-DetectTagEnvironmentRule
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+        - EventSource: aws.config
+          MessageType: ConfigurationItemChangeNotification
+        - EventSource: aws.config
+          MessageType: OversizedConfigurationItemChangeNotification
+        SourceIdentifier: !GetAtt DetectTagRuleLambdaFunction.Arn
+      Description: 'Ensures a tag Name is provided and is not empty'
+      InputParameters: '{"tagLabel":"environment"}'
+      Scope:
+        ComplianceResourceTypes:
+        - AWS::EC2::SecurityGroup
+        - AWS::EC2::Instance
+        - AWS::EC2::Volume
+
+  DetectTagCriticalityRule:
+    DependsOn: DetectTagRulePermission
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: ${self:service}-DetectTagCriticalityRule
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+        - EventSource: aws.config
+          MessageType: ConfigurationItemChangeNotification
+        - EventSource: aws.config
+          MessageType: OversizedConfigurationItemChangeNotification
+        SourceIdentifier: !GetAtt DetectTagRuleLambdaFunction.Arn
+      Description: 'Ensures a tag Name is provided and is not empty'
+      InputParameters: '{"tagLabel":"criticality"}'
+      Scope:
+        ComplianceResourceTypes:
+        - AWS::EC2::SecurityGroup
+        - AWS::EC2::Instance
+        - AWS::EC2::Volume
+
+  # Auto shut down is only applied to EC2 and RDS instances
+  DetectTagAutoShutDownScheduleRule:
+    DependsOn: DetectTagRulePermission
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: ${self:service}-DetectTagAutoShutDownScheduleRule
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+        - EventSource: aws.config
+          MessageType: ConfigurationItemChangeNotification
+        - EventSource: aws.config
+          MessageType: OversizedConfigurationItemChangeNotification
+        SourceIdentifier: !GetAtt DetectTagRuleLambdaFunction.Arn
+      Description: 'Ensures a tag Name is provided and is not empty'
+      InputParameters: '{"tagLabel":"autoshutdowndchedule"}'
+      Scope:
+        ComplianceResourceTypes:
+        - AWS::EC2::Instance
+        - AWS::RDS::DBInstance
+
+  DetectTagOwnerRule:
+    DependsOn: DetectTagRulePermission
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: ${self:service}-DetectTagOwnerRule
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+        - EventSource: aws.config
+          MessageType: ConfigurationItemChangeNotification
+        - EventSource: aws.config
+          MessageType: OversizedConfigurationItemChangeNotification
+        SourceIdentifier: !GetAtt DetectTagRuleLambdaFunction.Arn
+      Description: 'Ensures a tag Name is provided and is not empty'
+      InputParameters: '{"tagLabel":"owner"}'
+      Scope:
+        ComplianceResourceTypes:
+        - AWS::EC2::SecurityGroup
+        - AWS::EC2::Instance
+        - AWS::EC2::Volume
+
+  DetectTagAppNameRule:
+    DependsOn: DetectTagRulePermission
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: ${self:service}-DetectTagAppNameRule
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+        - EventSource: aws.config
+          MessageType: ConfigurationItemChangeNotification
+        - EventSource: aws.config
+          MessageType: OversizedConfigurationItemChangeNotification
+        SourceIdentifier: !GetAtt DetectTagRuleLambdaFunction.Arn
+      Description: 'Ensures a tag Name is provided and is not empty'
+      InputParameters: '{"tagLabel":"app-name"}'
+      Scope:
+        ComplianceResourceTypes:
+        - AWS::EC2::SecurityGroup
+        - AWS::EC2::Instance
+        - AWS::EC2::Volume
+
+  DetectTagAtemiIdRule:
+    DependsOn: DetectTagRulePermission
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: ${self:service}-DetectTagAtemiIdRule
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+        - EventSource: aws.config
+          MessageType: ConfigurationItemChangeNotification
+        - EventSource: aws.config
+          MessageType: OversizedConfigurationItemChangeNotification
+        SourceIdentifier: !GetAtt DetectTagRuleLambdaFunction.Arn
+      Description: 'Ensures a tag Name is provided and is not empty'
+      InputParameters: '{"tagLabel":"atemi-id"}'
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::SecurityGroup
         - AWS::EC2::Instance
         - AWS::EC2::Volume
         
-  # To allow aws.config to call TagNameRule
-  TagNameRulePermission:
+  # To allow aws.config to call DetectTagRule
+  DetectTagRulePermission:
     # DependsOn: ConfigRecorder
     Type: AWS::Lambda::Permission
     Properties:
-      FunctionName: !GetAtt TagNameRuleLambdaFunction.Arn
+      FunctionName: !GetAtt DetectTagRuleLambdaFunction.Arn
       Action: lambda:InvokeFunction
       Principal: config.amazonaws.com
         

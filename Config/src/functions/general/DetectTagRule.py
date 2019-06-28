@@ -16,13 +16,13 @@ annotation = "Tag Name must be present and not empty"
 errorTopicArnParamName = "configErrorTopicArn"
 errorTopicArn = os.getenv(errorTopicArnParamName)
 
-def evaluate_compliance(configuration_item):
+def evaluate_compliance(configuration_item, tagLabel):
     try:
         compliance_status = "NON_COMPLIANT"
 
         if "configuration" in configuration_item and configuration_item["configuration"] != None:
             for tag in configuration_item["configuration"]["tags"]:
-                if tag["key"] == "Name":
+                if tag["key"] == tagLabel:
                     if tag["value"]:
                         compliance_status = "COMPLIANT"
     except Exception as e:
@@ -35,12 +35,14 @@ def evaluate_compliance(configuration_item):
 
 def lambda_handler(event, context):
     try:
-        configuration_item, result_token = init(event)
+        configuration_item, result_token, ruleParameters = init(event)
+        if "tagLabel" not in ruleParameters:
+            raise Exception('tag to be detected not specified')
 
         compliance_status = "NOT_APPLICABLE"
 
         if "eventLeftScope" in event and event["eventLeftScope"] == False:
-            compliance_status = evaluate_compliance(configuration_item)
+            compliance_status = evaluate_compliance(configuration_item, ruleParameters['tagLabel'])
 
         evaluation = buildEvaluation(configuration_item, compliance_status, annotation)
 

@@ -13,12 +13,14 @@ def init(event):
         result_token = "No token found."
         if "resultToken" in event:
             result_token = event["resultToken"]
+        ruleParameters = json.loads(event["ruleParameters"])
+
     except Exception as e:
         print("init: Error while processing inputs")
         print(traceback.format_exc())
         raise e
 
-    return configuration_item, result_token
+    return configuration_item, result_token, ruleParameters
 
 def buildEvaluation(configuration_item, compliance_status, annotation):
     try:
