@@ -1,0 +1,26 @@
+{
+    "configurationItemDiff": null,
+    "configurationItem": {
+      "relatedEvents": [],
+      "relationships": [],
+      "configuration": null,
+      "supplementaryConfiguration": {},
+      "tags": {},
+      "configurationItemVersion": "1.3",
+      "configurationItemCaptureTime": "2019-05-14T07:12:10.754Z",
+      "configurationStateId": 1561941474938,
+      "awsAccountId": "315777477680",
+      "configurationItemStatus": "ResourceNotRecorded",
+      "resourceType": "AWS::RDS::DBSnapshot",
+      "resourceId": "iolab-test-boiron-1o463wlu7y7pn-appserver-hft6a13qk8us-snapshot-rds-sef9yjl7is2p",
+      "resourceName": "iolab-test-boiron-1o463wlu7y7pn-appserver-hft6a13qk8us-snapshot-rds-sef9yjl7is2p",
+      "ARN": "arn:aws:rds:us-east-1:315777477680:snapshot:iolab-test-boiron-1o463wlu7y7pn-appserver-hft6a13qk8us-snapshot-rds-sef9yjl7is2p",
+      "awsRegion": "us-east-1",
+      "availabilityZone": "us-east-1b",
+      "configurationStateMd5Hash": "",
+      "resourceCreationTime": "2018-11-19T16:08:10.577Z"
+    },
+    "notificationCreationTime": "2019-07-01T13:14:32.521Z",
+    "messageType": "ConfigurationItemChangeNotification",
+    "recordVersion": "1.3"
+  }

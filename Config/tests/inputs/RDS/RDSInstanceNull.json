@@ -1,0 +1,28 @@
+{
+    "configurationItemDiff": null,
+    "configurationItem": {
+      "relatedEvents": [],
+      "relationships": [],
+      "configuration": null,
+      "supplementaryConfiguration": {},
+      "tags": {
+        "workload-type": "other"
+      },
+      "configurationItemVersion": "1.3",
+      "configurationItemCaptureTime": "2019-07-01T12:37:53.392Z",
+      "configurationStateId": 1561984673392,
+      "awsAccountId": "315777477680",
+      "configurationItemStatus": "ResourceNotRecorded",
+      "resourceType": "AWS::RDS::DBInstance",
+      "resourceId": "db-ODKMWZQ66B46CGZDEOFDBEMZHQ",
+      "resourceName": "testconfig",
+      "ARN": "arn:aws:rds:us-east-1:315777477680:db:testconfig",
+      "awsRegion": "us-east-1",
+      "availabilityZone": "us-east-1f",
+      "configurationStateMd5Hash": "",
+      "resourceCreationTime": "2019-07-01T11:01:23.253Z"
+    },
+    "notificationCreationTime": "2019-07-01T13:14:32.447Z",
+    "messageType": "ConfigurationItemChangeNotification",
+    "recordVersion": "1.3"
+  }

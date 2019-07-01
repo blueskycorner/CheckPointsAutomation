@@ -20,11 +20,10 @@ def evaluate_compliance(configuration_item, tagLabel):
     try:
         compliance_status = "NON_COMPLIANT"
 
-        if "configuration" in configuration_item and configuration_item["configuration"] != None:
-            for tag in configuration_item["configuration"]["tags"]:
-                if tag["key"] == tagLabel:
-                    if tag["value"]:
-                        compliance_status = "COMPLIANT"
+        if "tags" in configuration_item and configuration_item["tags"] != None:
+            if tagLabel in configuration_item["tags"]:
+                if configuration_item["tags"][tagLabel]:
+                    compliance_status = "COMPLIANT"
     except Exception as e:
         print("evaluate_compliance: Error while evaluating the rule")
         print(traceback.format_exc())
