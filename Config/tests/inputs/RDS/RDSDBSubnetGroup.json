@@ -1,0 +1,121 @@
+{
+    "configurationItemDiff": null,
+    "configurationItem": {
+      "relatedEvents": [],
+      "relationships": [
+        {
+          "resourceId": "subnet-5a4a6065",
+          "resourceName": null,
+          "resourceType": "AWS::EC2::Subnet",
+          "name": "Is associated with Subnet"
+        },
+        {
+          "resourceId": "subnet-5b858074",
+          "resourceName": null,
+          "resourceType": "AWS::EC2::Subnet",
+          "name": "Is associated with Subnet"
+        },
+        {
+          "resourceId": "subnet-70804e3a",
+          "resourceName": null,
+          "resourceType": "AWS::EC2::Subnet",
+          "name": "Is associated with Subnet"
+        },
+        {
+          "resourceId": "subnet-85c8d6e1",
+          "resourceName": null,
+          "resourceType": "AWS::EC2::Subnet",
+          "name": "Is associated with Subnet"
+        },
+        {
+          "resourceId": "subnet-992218c4",
+          "resourceName": null,
+          "resourceType": "AWS::EC2::Subnet",
+          "name": "Is associated with Subnet"
+        },
+        {
+          "resourceId": "subnet-a0329daf",
+          "resourceName": null,
+          "resourceType": "AWS::EC2::Subnet",
+          "name": "Is associated with Subnet"
+        },
+        {
+          "resourceId": "vpc-2099045b",
+          "resourceName": null,
+          "resourceType": "AWS::EC2::VPC",
+          "name": "Is associated with Vpc"
+        }
+      ],
+      "configuration": {
+        "dBSubnetGroupName": "default",
+        "dBSubnetGroupDescription": "default",
+        "vpcId": "vpc-2099045b",
+        "subnetGroupStatus": "Complete",
+        "subnets": [
+          {
+            "subnetIdentifier": "subnet-85c8d6e1",
+            "subnetAvailabilityZone": {
+              "name": "us-east-1c"
+            },
+            "subnetStatus": "Active"
+          },
+          {
+            "subnetIdentifier": "subnet-5b858074",
+            "subnetAvailabilityZone": {
+              "name": "us-east-1d"
+            },
+            "subnetStatus": "Active"
+          },
+          {
+            "subnetIdentifier": "subnet-5a4a6065",
+            "subnetAvailabilityZone": {
+              "name": "us-east-1e"
+            },
+            "subnetStatus": "Active"
+          },
+          {
+            "subnetIdentifier": "subnet-a0329daf",
+            "subnetAvailabilityZone": {
+              "name": "us-east-1f"
+            },
+            "subnetStatus": "Active"
+          },
+          {
+            "subnetIdentifier": "subnet-992218c4",
+            "subnetAvailabilityZone": {
+              "name": "us-east-1b"
+            },
+            "subnetStatus": "Active"
+          },
+          {
+            "subnetIdentifier": "subnet-70804e3a",
+            "subnetAvailabilityZone": {
+              "name": "us-east-1a"
+            },
+            "subnetStatus": "Active"
+          }
+        ],
+        "dBSubnetGroupArn": "arn:aws:rds:us-east-1:315777477680:subgrp:default"
+      },
+      "supplementaryConfiguration": {
+        "Tags": []
+      },
+      "tags": {},
+      "configurationItemVersion": "1.3",
+      "configurationItemCaptureTime": "2019-07-01T15:06:45.939Z",
+      "configurationStateId": 1561993605939,
+      "awsAccountId": "315777477680",
+      "configurationItemStatus": "OK",
+      "resourceType": "AWS::RDS::DBSubnetGroup",
+      "resourceId": "default",
+      "resourceName": "default",
+      "ARN": "arn:aws:rds:us-east-1:315777477680:subgrp:default",
+      "awsRegion": "us-east-1",
+      "availabilityZone": "Multiple Availability Zones",
+      "configurationStateMd5Hash": "",
+      "resourceCreationTime": null
+    },
+    "notificationCreationTime": "2019-07-01T15:38:07.435Z",
+    "messageType": "ConfigurationItemChangeNotification",
+    "recordVersion": "1.3"
+  }

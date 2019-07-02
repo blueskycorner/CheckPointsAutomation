@@ -1,0 +1,17 @@
+{
+    "ResourceTagMappingList": [
+        {
+            "ResourceARN": "arn:aws:rds:us-east-1:315777477680:db:testconfig", 
+            "Tags": [
+                {
+                    "Value": "app1", 
+                    "Key": "app-name"
+                }, 
+                {
+                    "Value": "other", 
+                    "Key": "workload-type"
+                }
+            ]
+        }
+    ]
+}

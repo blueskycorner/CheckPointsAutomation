@@ -1,0 +1,521 @@
+{
+    "ComplianceByResources": [
+        {
+            "ResourceType": "AWS::RDS::DBSubnetGroup", 
+            "ResourceId": "default", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 1, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::RDS::DBSecurityGroup", 
+            "ResourceId": "default", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 1, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::Volume", 
+            "ResourceId": "vol-06362b82f5d3cfde7", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::Volume", 
+            "ResourceId": "vol-0d60054373a1430a8", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-00066dc9642e0a0db", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 6, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-00147940493ee0d85", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-002b80fdb55e8f0cc", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-015a6229502b9c6a7", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0185c7b1989b6b776", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 6, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-02178369b727bab29", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 4, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-028562fab7e0146a8", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-02d8d758926395e9e", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-02f52e03ba385aa89", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-03d6f26b8a71355eb", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0456392e9983d92dc", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-048613ce61b8bbfea", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-04dcdbbd3463b7342", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-058bfbfeb7dc40ce8", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-058cd448e71bd67a7", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-05d5d419c30c69785", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 6, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-06537a8c2768c3ca5", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-068245b529ea1559e", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-06a58b148b8720e17", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0707bc6dc85ccba4d", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-07588e6f6995f6dac", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-076eee11bedb358c4", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-08b766c4d810f9b5e", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0915bd10c589bdf43", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0944509c0711ca05e", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0987243084e57d0c2", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-09aa572b2521a4dc4", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0a3a3e1cc68f7f1df", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0a5ca010fdecd82ce", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 4, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0ac8a679d3c65891b", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0acb0292d39498833", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0c0ae7a68f380021a", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0c4e14142cbb17c5f", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0c60468dcd13b9459", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0ea36d522d17ba7db", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0eb8904c3c4dc87a6", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0ee8f00a3bdb8f056", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0f7a94b6f3b56fa8d", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-0fd3afa631b74fd01", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 7, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::SecurityGroup", 
+            "ResourceId": "sg-92ad90e4", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 6, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::RDS::DBInstance", 
+            "ResourceId": "db-ODKMWZQ66B46CGZDEOFDBEMZHQ", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 1, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::Instance", 
+            "ResourceId": "i-03df568a68ac1082e", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 6, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }, 
+        {
+            "ResourceType": "AWS::EC2::Instance", 
+            "ResourceId": "i-0424ab1f352e5a11e", 
+            "Compliance": {
+                "ComplianceContributorCount": {
+                    "CappedCount": 5, 
+                    "CapExceeded": false
+                }, 
+                "ComplianceType": "NON_COMPLIANT"
+            }
+        }
+    ]
+}
