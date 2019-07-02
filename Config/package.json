@@ -6,7 +6,7 @@
   "config": {
     "profile": "esncf",
     "configName": "default",
-    "end": "--profile esncf --region eu-west-3",
+    "end": "--profile hardis --region us-east-1",
     "deliveryChannelName": "default"
   },
   "scripts": {

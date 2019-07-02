@@ -9,33 +9,42 @@ config = session.client("config")
 
 def main():
     print("start")
-    NextToken = None
-    response = config.describe_compliance_by_resource(
-    # ResourceType='AWS::EC2::Instance',
-    # ResourceId='string',
-    ComplianceTypes=[
-        "NON_COMPLIANT","COMPLIANT"
-    ],
-    Limit=100,
-    # NextToken=''
+    # NextToken = None
+    # response = config.describe_compliance_by_resource(
+    # # ResourceType='AWS::EC2::Instance',
+    # # ResourceId='string',
+    # ComplianceTypes=[
+    #     "NON_COMPLIANT","COMPLIANT"
+    # ],
+    # Limit=100,
+    # # NextToken=''
+    # )
+    # print(response)
+
+    # if "NextToken" in response:
+    #     NextToken = response["NextToken"]
+
+    # while NextToken:
+    #     response = config.describe_compliance_by_resource(
+    #     ComplianceTypes=[
+    #         "NON_COMPLIANT","COMPLIANT"
+    #     ],
+    #     Limit=100,
+    #     NextToken=NextToken
+    #     )
+    #     NextToken = None
+    #     if "NextToken" in response:
+    #         NextToken = response["NextToken"]
+    #     print(response)
+    response = config.batch_get_resource_config(
+    resourceKeys=[
+        {
+            'resourceType': 'AWS::RDS::DBInstance',
+            'resourceId': 'db-ODKMWZQ66B46CGZDEOFDBEMZHQ'
+        },
+    ]
     )
     print(response)
-
-    if "NextToken" in response:
-        NextToken = response["NextToken"]
-
-    while NextToken:
-        response = config.describe_compliance_by_resource(
-        ComplianceTypes=[
-            "NON_COMPLIANT","COMPLIANT"
-        ],
-        Limit=100,
-        NextToken=NextToken
-        )
-        NextToken = None
-        if "NextToken" in response:
-            NextToken = response["NextToken"]
-        print(response)
 
 
 if __name__== "__main__":

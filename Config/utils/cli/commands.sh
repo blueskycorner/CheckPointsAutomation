@@ -8,4 +8,5 @@ aws configservice batch-get-resource-config --resource-keys resourceType=AWS::RD
 aws configservice get-resource-config-history --resource-type AWS::EC2::SecurityGroup --resource-id sg-002b80fdb55e8f0cc --profile hardis
 aws configservice get-discovered-resource-counts --profile hardis
 
+aws configservice deliver-config-snapshot --delivery-channel-name BaseConfig-dev-ConfigDeliveryChannel-1NXY5K8ZBNJ0D
 aws resourcegroupstaggingapi get-resources --tag-filters Key=app-name,Values=app1 --profile hardis
