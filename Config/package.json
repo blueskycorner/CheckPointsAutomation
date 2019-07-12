@@ -10,6 +10,7 @@
     "deliveryChannelName": "default"
   },
   "scripts": {
+    "pytest": "python -m pytest",
     "list-rec": "aws configservice describe-configuration-recorders %npm_package_config_end%",
     "list-dc": "aws configservice describe-delivery-channels %npm_package_config_end%",
     "del-rec": "aws configservice delete-configuration-recorder --configuration-recorder-name %npm_package_config_configName% %npm_package_config_end%",
