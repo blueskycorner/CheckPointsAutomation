@@ -7,10 +7,7 @@ service: PEX-Config # NOTE: update this with your service name
 provider:
   name: aws
   runtime: python3.7
-  profile: hardis
-  region: us-east-1
-  # profile: saml
-  # region: eu-west-3
+  region: eu-west-3
   stage: ${opt:stage, 'dev'}
   logRetentionInDays: 14
   stackTags:
@@ -31,6 +28,7 @@ plugins:
 custom:
   pythonRequirements:
     dockerizePip: false
+    pythonBin: /usr/bin/python3
 
 functions:
   DetectTagRule:
