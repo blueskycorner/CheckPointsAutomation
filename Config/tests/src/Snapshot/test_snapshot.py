@@ -1,11 +1,10 @@
 import json
-import os 
-print(os.getcwd())
 from src.functions.Snapshot.configSnapshot import splitByApp 
 
 # Tag app-name
 def test_splitByApp():
     configSnapshotByApp = splitByApp("test/inputs/Snapshot/ConfigSnapshot1.json")
+    a=3
     assert 1 == 1
     
 if __name__ == "__main__":
