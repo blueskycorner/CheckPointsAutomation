@@ -44,9 +44,9 @@ def evaluate_compliance(configuration_item):
                 if port >= portMin and port <= portMax:
                     compliance_status = "COMPLIANT"
             else:
-                print("Missing port information")
+                raise Exception("Missing port information")
         else:
-            print("Missing engine or endpoint information")
+            raise Exception("Missing engine or endpoint information")
 
     except Exception as e:
         print("evaluate_compliance: Error while evaluating the rule")
