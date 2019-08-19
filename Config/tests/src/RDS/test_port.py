@@ -34,5 +34,9 @@ def test_noengine():
     compliance_status = evalution("RDSInstance_noengine.json")
     assert compliance_status == None
     
+def test_engineNotKnown():
+    compliance_status = evalution("RDSInstance_engineNotKnown.json")
+    assert compliance_status == None
+    
 if __name__ == "__main__":
     test_noengine()
